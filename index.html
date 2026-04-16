@@ -14,13 +14,13 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background: #fdf8f4;
-            color: #3a2c2a;
+            color: #3d2a2a;
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Цветочный фон */
+        /* Декоративный фон */
         .floral-bg {
             position: fixed;
             top: 0;
@@ -29,9 +29,9 @@
             height: 100%;
             pointer-events: none;
             z-index: 0;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.06"><path fill="%23d4a5a5" d="M100 20c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 30c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-20 20c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm40 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-30-10c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm20 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z"/><circle cx="100" cy="100" r="8" fill="%23e8c3c3"/></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.04"><path fill="%23c4336e" d="M100 20c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 30c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z"/><path fill="%23e85d94" d="M80 80c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm40 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z"/><circle cx="50" cy="150" r="6" fill="%23c4336e"/><circle cx="150" cy="50" r="6" fill="%23e85d94"/><circle cx="160" cy="130" r="4" fill="%23c4336e"/><circle cx="40" cy="60" r="4" fill="%23e85d94"/></svg>');
             background-repeat: repeat;
-            background-size: 60px;
+            background-size: 100px;
         }
 
         .container {
@@ -45,49 +45,76 @@
         /* Герой-секция */
         .hero {
             text-align: center;
-            padding: 50px 20px 40px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 30px;
+            padding: 60px 20px 50px;
+            background: white;
+            border-radius: 40px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 3px solid #c4336e;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "✧";
+            position: absolute;
+            top: 25px;
+            left: 35px;
+            color: #c4336e;
+            font-size: 18px;
+            opacity: 0.4;
+        }
+
+        .hero::after {
+            content: "✧";
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #c4336e;
+            font-size: 18px;
+            opacity: 0.4;
         }
 
         .subtitle {
             font-size: 12px;
-            letter-spacing: 3px;
-            color: #c4a27a;
-            font-weight: 500;
+            letter-spacing: 4px;
+            color: #c4336e;
+            font-weight: 600;
             text-transform: uppercase;
+            background: rgba(196, 51, 110, 0.08);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 30px;
         }
 
         .names {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 56px;
-            font-weight: 600;
+            font-size: 62px;
+            font-weight: 700;
             margin: 20px 0;
-            color: #2c1e1a;
+            color: #c4336e;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
 
         .amp {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 48px;
+            font-size: 52px;
             font-style: italic;
-            color: #c4a27a;
+            color: #d45a8a;
         }
 
         .invitation-text p {
             font-size: 14px;
-            letter-spacing: 2px;
-            color: #6b5a54;
+            letter-spacing: 3px;
+            color: #b08870;
             margin-bottom: 10px;
         }
 
         .invitation-text h2 {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 42px;
-            font-weight: 500;
+            font-size: 48px;
+            font-weight: 600;
             letter-spacing: 8px;
-            color: #c4a27a;
+            color: #c4336e;
         }
 
         /* Детали */
@@ -103,56 +130,65 @@
             background: white;
             padding: 25px 20px;
             text-align: center;
-            border-radius: 20px;
+            border-radius: 25px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid #f0e6e0;
         }
 
         .detail-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(196, 51, 110, 0.1);
+            border-color: rgba(196, 51, 110, 0.2);
         }
 
         .detail-icon {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 15px;
         }
 
         .detail-date {
-            font-size: 22px;
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 700;
             font-family: 'Cormorant Garamond', 'Georgia', serif;
+            color: #c4336e;
         }
 
         .detail-time {
             font-size: 14px;
-            color: #999;
+            color: #b08870;
             margin-top: 5px;
         }
 
         .detail-address {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
+            color: #4a3530;
         }
 
         .detail-venue {
             font-size: 13px;
-            color: #c4a27a;
+            color: #c4336e;
             margin-top: 8px;
+            font-weight: 600;
         }
 
         /* Таймер */
         .countdown-section {
             text-align: center;
-            background: rgba(255, 245, 240, 0.95);
-            padding: 40px 20px;
-            border-radius: 30px;
+            background: white;
+            padding: 45px 20px;
+            border-radius: 35px;
             margin-bottom: 50px;
+            border: 1px solid #f0e6e0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
         }
 
         .countdown-section h3 {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 26px;
+            font-size: 28px;
             margin-bottom: 25px;
+            color: #c4336e;
         }
 
         .countdown {
@@ -163,178 +199,262 @@
         }
 
         .countdown-item {
-            background: white;
-            padding: 15px 20px;
-            border-radius: 15px;
-            min-width: 80px;
+            background: #fefaf7;
+            padding: 18px 22px;
+            border-radius: 20px;
+            min-width: 90px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #f0e6e0;
         }
 
         .countdown-item span:first-child {
-            font-size: 32px;
-            font-weight: 700;
+            font-size: 38px;
+            font-weight: 800;
             font-family: 'Cormorant Garamond', 'Georgia', serif;
             display: block;
-            color: #c4a27a;
+            color: #c4336e;
         }
 
         .countdown-item span:last-child {
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #999;
+            color: #b08870;
+            font-weight: 600;
+        }
+
+        /* Кнопка анкеты */
+        .survey-btn-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .survey-btn {
+            background: #c4336e;
+            color: white;
+            border: none;
+            padding: 20px 48px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(196, 51, 110, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            letter-spacing: 1px;
+        }
+
+        .survey-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(196, 51, 110, 0.4);
+            background: #d43f7a;
+        }
+
+        .survey-btn:active {
+            transform: translateY(0);
+        }
+
+        .survey-btn-container p {
+            margin-top: 18px;
+            font-size: 14px;
+            color: #b08870;
+            background: rgba(196, 51, 110, 0.06);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
         }
 
         /* Дресс-код */
         .dresscode-section {
             background: white;
-            border-radius: 30px;
+            border-radius: 35px;
             margin-bottom: 50px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0e6e0;
         }
 
         .dresscode-header {
-            background: linear-gradient(135deg, #e8d5c4 0%, #d4bca5 100%);
-            padding: 25px;
+            background: #c4336e;
+            padding: 28px;
             text-align: center;
-            color: #4a3530;
+            color: white;
         }
 
         .dresscode-header h3 {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 8px;
+            letter-spacing: 2px;
         }
 
         .dresscode-header p {
-            font-size: 13px;
-            opacity: 0.85;
+            font-size: 14px;
+            opacity: 0.95;
         }
 
         .dresscode-content {
-            padding: 30px;
+            padding: 35px;
         }
 
         .color-palette {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
         .color-circle {
             text-align: center;
+            flex: 0 0 auto;
         }
 
         .color {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            margin-bottom: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 2px solid white;
+            outline: 1px solid #f0e6e0;
+        }
+
+        .color:hover {
+            transform: scale(1.05);
         }
 
         .color-name {
-            font-size: 12px;
-            color: #666;
+            font-size: 13px;
+            color: #8b6b5a;
+            font-weight: 500;
         }
 
         .forbidden-colors {
-            background: #fdf8f4;
-            padding: 20px;
-            border-radius: 20px;
+            background: #fefaf7;
+            padding: 25px;
+            border-radius: 25px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
+            border: 1px solid #f0e6e0;
         }
 
         .forbidden-colors h4 {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 18px;
-            color: #c4a27a;
-            margin-bottom: 15px;
+            font-size: 20px;
+            color: #c4336e;
+            margin-bottom: 18px;
         }
 
         .forbidden-list {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
         .forbidden-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
+            gap: 10px;
+            font-size: 15px;
         }
 
         .forbidden-item .color-dot {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .forbidden-item .white-dot { background: #ffffff; border: 1px solid #ddd; }
+        .forbidden-item .white-dot { background: #ffffff; border: 2px solid #ddd; }
         .forbidden-item .red-dot { background: #e53935; }
         .forbidden-item .black-dot { background: #1e1e1e; }
 
         .forbidden-item span:last-child {
-            color: #999;
+            color: #b08870;
             text-decoration: line-through;
         }
 
-        @media (max-width: 600px) {
-            .color {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .forbidden-list {
-                gap: 15px;
-            }
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
         }
 
-        /* Секция с формой */
-        .form-section {
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
             background: white;
-            border-radius: 30px;
-            margin-bottom: 50px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 40px;
+            width: 90%;
+            max-width: 750px;
+            height: 85vh;
+            position: relative;
+            animation: slideIn 0.3s ease;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+            border-top: 5px solid #c4336e;
+            border-bottom: 5px solid #c4336e;
         }
 
-        .form-header {
-            background: linear-gradient(135deg, #c4a27a 0%, #d4b896 100%);
-            padding: 30px;
-            text-align: center;
-            color: white;
+        .modal-header {
+            background: white;
+            padding: 22px 25px;
+            border-radius: 40px 40px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0e6e0;
         }
 
-        .form-header h3 {
+        .modal-header h3 {
+            color: #c4336e;
             font-family: 'Cormorant Garamond', 'Georgia', serif;
             font-size: 28px;
-            margin-bottom: 10px;
+            margin: 0;
         }
 
-        .form-header p {
-            font-size: 14px;
-            opacity: 0.9;
+        .close-modal {
+            background: none;
+            border: none;
+            color: #b08870;
+            font-size: 38px;
+            cursor: pointer;
+            line-height: 1;
+            transition: transform 0.2s;
         }
 
-        /* Контейнер для Google Form */
-        .google-form-container {
-            background: white;
+        .close-modal:hover {
+            transform: scale(1.1);
+            color: #c4336e;
+        }
+
+        .modal-body {
             padding: 20px;
-            display: flex;
-            justify-content: center;
+            height: calc(85vh - 80px);
+            overflow-y: auto;
         }
 
-        .google-form-container iframe {
+        .modal-body iframe {
             width: 100%;
-            max-width: 640px;
-            min-height: 600px;
+            height: 100%;
             border: none;
             border-radius: 20px;
         }
@@ -342,57 +462,77 @@
         /* Карта */
         .map-section {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .map-section h3 {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            font-size: 26px;
+            font-size: 28px;
             margin-bottom: 20px;
+            color: #c4336e;
         }
 
         .map-container {
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             margin-bottom: 15px;
+            border: 1px solid #f0e6e0;
         }
 
         .map-container iframe {
             width: 100%;
-            height: 300px;
+            height: 400px;
             border: none;
         }
 
         .address-full {
-            color: #6b5a54;
+            color: #8b6b5a;
             font-size: 14px;
             line-height: 1.5;
+            background: #fefaf7;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+
+        .address-full strong {
+            color: #c4336e;
         }
 
         footer {
             text-align: center;
-            padding: 30px 0 20px;
-            border-top: 1px solid #e8ddd5;
-            color: #999;
+            padding: 35px 0 25px;
+            border-top: 1px solid #f0e6e0;
+            color: #b08870;
             font-size: 14px;
         }
 
         .copyright {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            margin-top: 10px;
-            font-size: 16px;
-            color: #c4a27a;
+            margin-top: 12px;
+            font-size: 18px;
+            color: #c4336e;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         @media (max-width: 600px) {
             .names {
-                font-size: 40px;
+                font-size: 44px;
             }
             
             .invitation-text h2 {
-                font-size: 32px;
-                letter-spacing: 4px;
+                font-size: 34px;
+                letter-spacing: 6px;
             }
             
             .detail-card {
@@ -400,49 +540,75 @@
             }
             
             .countdown-item {
-                min-width: 65px;
-                padding: 10px 12px;
+                min-width: 70px;
+                padding: 12px 15px;
             }
             
             .countdown-item span:first-child {
-                font-size: 24px;
-            }
-            
-            .google-form-container iframe {
-                min-height: 550px;
-            }
-            
-            .form-header {
-                padding: 20px;
-            }
-            
-            .form-header h3 {
-                font-size: 22px;
+                font-size: 28px;
             }
 
             .dresscode-header h3 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .dresscode-content {
-                padding: 20px;
+                padding: 25px;
+            }
+
+            .survey-btn {
+                padding: 16px 35px;
+                font-size: 18px;
+            }
+
+            .modal-content {
+                width: 95%;
+                height: 90vh;
+            }
+
+            .modal-header h3 {
+                font-size: 22px;
+            }
+
+            .color {
+                width: 55px;
+                height: 55px;
+            }
+
+            .map-container iframe {
+                height: 300px;
+            }
+
+            .color-palette {
+                gap: 15px;
             }
         }
 
-        /* Анимации */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .hero, .details, .countdown-section, .dresscode-section, .form-section, .map-section {
-            animation: fadeIn 0.6s ease-out forwards;
+        .hero, .details, .countdown-section, .survey-btn-container, .dresscode-section, .map-section {
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+
+        /* Декоративные элементы */
+        .flower-decoration {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 40px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="floral-bg"></div>
+    <div class="flower-decoration">🌹</div>
     
     <div class="container">
         <!-- Герой-секция -->
@@ -460,25 +626,14 @@
         <!-- Детали -->
         <section class="details">
             <div class="detail-card">
-                <div class="detail-icon">📅</div>
+                <div class="detail-icon">🗓️</div>
                 <div class="detail-date">25 июля 2026</div>
                 <div class="detail-time">Суббота, 16:00</div>
             </div>
             <div class="detail-card">
                 <div class="detail-icon">📍</div>
-                <div class="detail-address">г. Алматы,<br>ул. Керей-Жанибек хандар, 8</div>
+                <div class="detail-address">г. Алматы,<br>ул. Ханов Керея и Жанибека, 8</div>
                 <div class="detail-venue">Банкетный зал Sabroso</div>
-            </div>
-        </section>
-
-        <!-- Таймер -->
-        <section class="countdown-section">
-            <h3>До нашей свадьбы осталось</h3>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item"><span id="days">0</span><span>дней</span></div>
-                <div class="countdown-item"><span id="hours">0</span><span>часов</span></div>
-                <div class="countdown-item"><span id="minutes">0</span><span>минут</span></div>
-                <div class="countdown-item"><span id="seconds">0</span><span>секунд</span></div>
             </div>
         </section>
 
@@ -491,28 +646,28 @@
             <div class="dresscode-content">
                 <div class="color-palette">
                     <div class="color-circle">
-                        <div class="color" style="background: #f5e6d3;"></div>
-                        <span class="color-name">Шампань</span>
+                        <div class="color" style="background: #F5E6D3;"></div>
+                        <span class="color-name">Кремовый</span>
                     </div>
                     <div class="color-circle">
-                        <div class="color" style="background: #e8d5c4;"></div>
-                        <span class="color-name">Пудровый</span>
+                        <div class="color" style="background: #FFD1DC;"></div>
+                        <span class="color-name">Розовый</span>
                     </div>
                     <div class="color-circle">
-                        <div class="color" style="background: #d4e0d4;"></div>
+                        <div class="color" style="background: #E6E6FA;"></div>
+                        <span class="color-name">Лиловый</span>
+                    </div>
+                    <div class="color-circle">
+                        <div class="color" style="background: #B0E0E6;"></div>
+                        <span class="color-name">Голубой</span>
+                    </div>
+                    <div class="color-circle">
+                        <div class="color" style="background: #C4E0C4;"></div>
                         <span class="color-name">Мятный</span>
                     </div>
                     <div class="color-circle">
-                        <div class="color" style="background: #e6d5b8;"></div>
+                        <div class="color" style="background: #D2B48C;"></div>
                         <span class="color-name">Бежевый</span>
-                    </div>
-                    <div class="color-circle">
-                        <div class="color" style="background: #c4d4c4;"></div>
-                        <span class="color-name">Салатовый</span>
-                    </div>
-                    <div class="color-circle">
-                        <div class="color" style="background: #f0e0d0;"></div>
-                        <span class="color-name">Персиковый</span>
                     </div>
                 </div>
                 
@@ -532,51 +687,76 @@
                             <span>Черный</span>
                         </div>
                     </div>
-                    <p style="font-size: 12px; color: #999; margin-top: 15px;">
-                        💡 Рекомендуем: нейтральные и пастельные тона<br>
-                        (кремовый, нежно-розовый, лавандовый, голубой, мятный, бежевый)
+                    <p style="font-size: 13px; color: #b08870; margin-top: 20px;">
+                        💡 Мы будем рады видеть вас в нейтральных и пастельных тонах!<br>
+                        Кремовый, розовый, лиловый, голубой, мятный, бежевый
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Форма подтверждения (Google Forms) -->
-        <section class="form-section">
-            <div class="form-header">
-                <h3>✨ Пожалуйста, подтвердите присутствие ✨</h3>
-                <p>Мы будем рады видеть вас в этот важный день</p>
+        <!-- Карта "Как нас найти" -->
+        <section class="map-section">
+            <h3>📍 Как нас найти</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?ll=76.962556%2C43.237109&z=16&pt=76.962556,43.237109,pm2rdm"
+                    width="100%" 
+                    height="400" 
+                    frameborder="0">
+                </iframe>
             </div>
-            <div class="google-form-container">
+            <p class="address-full">
+                <strong>050051, Алматы</strong><br>
+                ул. Ханов Керея и Жанибека, 8<br>
+                Банкетный зал Sabroso
+            </p>
+        </section>
+
+        <!-- Кнопка Анкета гостя -->
+        <div class="survey-btn-container">
+            <button class="survey-btn" id="openSurveyBtn">
+                📝 АНКЕТА ГОСТЯ
+                <span style="font-size: 24px;">→</span>
+            </button>
+            <p>Пожалуйста, заполните анкету — это поможет нам организовать праздник лучше!</p>
+        </div>
+
+        <!-- Таймер "Сколько осталось до свадьбы" -->
+        <section class="countdown-section">
+            <h3>✨ До нашей свадьбы осталось ✨</h3>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item"><span id="days">0</span><span>дней</span></div>
+                <div class="countdown-item"><span id="hours">0</span><span>часов</span></div>
+                <div class="countdown-item"><span id="minutes">0</span><span>минут</span></div>
+                <div class="countdown-item"><span id="seconds">0</span><span>секунд</span></div>
+            </div>
+        </section>
+    
+        <footer>
+            <p>С нетерпением ждем встречи! ❤️</p>
+            <p class="copyright">Роман & Алина</p>
+        </footer>
+    </div>
+
+    <!-- Модальное окно с Google Формой -->
+    <div id="surveyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📝 Анкета гостя</h3>
+                <button class="close-modal" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo4xodHqNSnI8S8b1RPsKE_ymsCY7Ky8Jx2rKILk10485GaQ/viewform?embedded=true" 
                         width="100%" 
-                        height="600" 
+                        height="100%" 
                         frameborder="0" 
                         marginheight="0" 
                         marginwidth="0">
                     Загрузка…
                 </iframe>
             </div>
-        </section>
-
-        <!-- Карта -->
-        <section class="map-section">
-            <h3>Как нас найти</h3>
-            <div class="map-container">
-                <iframe 
-                    src="https://yandex.kz/map-widget/v1/?ll=76.9285,43.2366&z=17&pt=76.9285,43.2366"
-                    width="100%" 
-                    height="300" 
-                    frameborder="0" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p class="address-full">050051, Алматы, ул. Керей-Жанибек хандар, 8<br>Банкетный зал Sabroso</p>
-        </section>
-
-        <footer>
-            <p>С нетерпением ждем встречи! ❤️</p>
-            <p class="copyright">Роман & Алина</p>
-        </footer>
+        </div>
     </div>
 
     <script>
@@ -607,6 +787,33 @@
         
         setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        // Модальное окно для Google Формы
+        const modal = document.getElementById('surveyModal');
+        const openBtn = document.getElementById('openSurveyBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
