@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     
     <!-- SEO и превью для соцсетей -->
     <title>Роман & Алина | Приглашение на свадьбу</title>
     <meta name="description" content="Приглашаем вас на нашу свадьбу! 25 июля 2026, Алматы, банкетный зал Sabroso. Ждем вас!">
     
-    <!-- Open Graph / Facebook / VK / Telegram / WhatsApp -->
+    <!-- Open Graph / Facebook / VK / Instagram -->
     <meta property="og:title" content="Роман & Алина | Приглашение на свадьбу">
     <meta property="og:description" content="Приглашаем вас на нашу свадьбу! 25 июля 2026, Алматы, банкетный зал Sabroso">
     <meta property="og:image" content="https://wimbledonnut.github.io/weddingRomanAlina/invite.png">
@@ -26,7 +26,11 @@
     <meta name="twitter:description" content="Приглашаем вас на нашу свадьбу! 25 июля 2026">
     <meta name="twitter:image" content="https://wimbledonnut.github.io/weddingRomanAlina/invite.png">
     
-    <!-- Дополнительно для Telegram и VK -->
+    <!-- Telegram specific (без этих тегов превью не работает) -->
+    <meta property="telegram:channel" content="https://wimbledonnut.github.io/weddingRomanAlina/">
+    <meta name="telegram:image" content="https://wimbledonnut.github.io/weddingRomanAlina/invite.png">
+    
+    <!-- Дополнительно -->
     <meta property="og:image:alt" content="Приглашение на свадьбу Романа и Алины">
     <link rel="image_src" href="https://wimbledonnut.github.io/weddingRomanAlina/invite.png">
     
@@ -39,7 +43,7 @@
 
         body {
             font-family: 'Inter', 'Playfair Display', sans-serif;
-            background: #8f664a;
+            background: #F4D1BB;
             color: #2c1a12;
             line-height: 1.6;
             position: relative;
@@ -75,7 +79,7 @@
             background: #fffaf2;
             border-radius: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid #e8b86b;
             position: relative;
         }
@@ -167,14 +171,14 @@
             padding: 25px 20px;
             text-align: center;
             border-radius: 28px;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             border: 1px solid #e8d4b8;
         }
 
         .detail-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
             border-color: #e8b86b;
         }
 
@@ -220,7 +224,7 @@
             border-radius: 38px;
             margin-bottom: 50px;
             border: 1px solid #e8d4b8;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
         }
 
         .countdown-section h3 {
@@ -242,7 +246,7 @@
             padding: 18px 22px;
             border-radius: 22px;
             min-width: 90px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border: 1px solid #e8d4b8;
         }
 
@@ -282,7 +286,7 @@
             font-family: 'Inter', sans-serif;
             border-radius: 60px;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
@@ -292,7 +296,7 @@
 
         .survey-btn:hover {
             transform: translateY(-4px);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
             background: linear-gradient(135deg, #d4a54a 0%, #f0c47a 50%, #e8b86b 100%);
         }
 
@@ -300,8 +304,8 @@
             font-family: 'Inter', sans-serif;
             margin-top: 18px;
             font-size: 14px;
-            color: #e8d4b8;
-            background: rgba(0, 0, 0, 0.3);
+            color: #5c3d2e;
+            background: rgba(255, 255, 255, 0.5);
             display: inline-block;
             padding: 8px 24px;
             border-radius: 30px;
@@ -313,7 +317,7 @@
             border-radius: 38px;
             margin-bottom: 50px;
             overflow: hidden;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
         }
 
         .dresscode-header {
@@ -388,10 +392,10 @@
         .forbidden-item .red-dot { background: #e53935; }
         .forbidden-item .black-dot { background: #2c2c2c; }
 
-        .forbidden-item span:last-child {
-    color: #5c3d2e;
-    text-decoration: line-through;
-}
+        .forbidden-item span {
+            color: #5c3d2e;
+            text-decoration: line-through;
+        }
 
         .hint-text {
             font-size: 13px;
@@ -428,7 +432,7 @@
             height: 85vh;
             position: relative;
             animation: slideIn 0.3s ease;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.4);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.3);
             border-top: 5px solid #d4a54a;
             border-bottom: 5px solid #d4a54a;
         }
@@ -489,13 +493,13 @@
             font-family: 'Playfair Display', serif;
             font-size: 28px;
             margin-bottom: 20px;
-            color: #e8d4b8;
+            color: #5c3d2e;
         }
 
         .map-container {
             border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
             margin-bottom: 15px;
             border: 1px solid #e8d4b8;
         }
@@ -508,24 +512,24 @@
 
         .address-full {
             font-family: 'Inter', sans-serif;
-            color: #e8d4b8;
+            color: #5c3d2e;
             font-size: 14px;
             line-height: 1.5;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.5);
             display: inline-block;
             padding: 10px 24px;
             border-radius: 30px;
         }
 
         .address-full strong {
-            color: #e8b86b;
+            color: #c49a3a;
         }
 
         footer {
             text-align: center;
             padding: 35px 0 25px;
-            border-top: 1px solid rgba(232, 212, 184, 0.3);
-            color: #e8d4b8;
+            border-top: 1px solid rgba(92, 61, 46, 0.2);
+            color: #5c3d2e;
             font-size: 14px;
             font-family: 'Inter', sans-serif;
         }
@@ -534,7 +538,7 @@
             font-family: 'Playfair Display', serif;
             margin-top: 12px;
             font-size: 18px;
-            background: linear-gradient(135deg, #e8b86b 0%, #f0d094 100%);
+            background: linear-gradient(135deg, #c49a3a 0%, #e8b86b 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -671,7 +675,7 @@
             </div>
         </section>
 
-        <!-- Дресс-код (упрощенный, без обводки) -->
+        <!-- Дресс-код -->
         <section class="dresscode-section">
             <div class="dresscode-header">
                 <h3>👗 Дресс-код 👔</h3>
@@ -728,7 +732,7 @@
             <p>Пожалуйста, заполните анкету — это поможет нам организовать праздник лучше!</p>
         </div>
 
-        <!-- Таймер "Сколько осталось до свадьбы" -->
+        <!-- Таймер -->
         <section class="countdown-section">
             <h3>✨ До нашей свадьбы осталось ✨</h3>
             <div class="countdown" id="countdown">
